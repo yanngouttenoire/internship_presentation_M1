@@ -1,0 +1,488 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage[hypcap]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[]{Photoelectron spectroscopy of chiral molecules with intense midinfrared laser field} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Yann Gouttenoire} % Your name
+\institute[UPSUD] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+University Paris-Sud \\ % Your institution for the title page
+\medskip
+\textit{yann.gouttenoire@u-psud.fr} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+ \begin{figure}[h]
+      \centering
+      \vspace{-0.5cm}
+    \includegraphics[width=0.30\textwidth]{logo/magistere.pdf}
+      \end{figure}    
+      \vspace{-1cm}  
+   \begin{figure}[h]
+   \centering
+   \begin{subfigure}[l]{0.30\textwidth}
+       \includegraphics[width=\textwidth]{logo/upsud}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}[r]{0.30\textwidth}
+       \includegraphics[width=\textwidth]{logo/upsaclay}
+   \end{subfigure}
+   \end{figure}
+        \vfill
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+ {\large \textbf{Internship supervisors:}}\\
+       \vspace{0.5cm} 
+  {\large Eric Charron$^{1}$ and Misha Ivanov$^{2}$} \\
+       \vspace{0.5cm}
+  {\large \textit{$^{1}$Institut de Chimie Mol\'eculaire d'Orsay, Orsay, France}} \\   
+  {\large \textit{$^{2}$Max Born Institute, Berlin, Germany}} \\
+   \begin{figure}[h]
+   \centering
+   \begin{subfigure}[l]{0.2\textwidth}
+       \includegraphics[width=\textwidth]{logo/ismo}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}[r]{0.2\textwidth}
+       \includegraphics[width=\textwidth]{logo/mbi}
+   \end{subfigure}
+   \end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%------------------------------------------------
+\section{Introduction} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+\item
+The topic: To probe the chirality of molecules with intense elliptically polarized laser field. \\
+\item
+Context: Strong laser field ionization: electric field $F\sim \frac{1}{100},\, \frac{1}{10},\, 1 \; au$ \\
+\item
+My work: 
+\begin{itemize}
+\item
+To read about strong laser field ionization.
+\item
+To compute numerically the photoelectron spectrum PES: the energy of the electrons detected after having been ionized by the strong laser field.
+\item
+To compute numerically the low-energy structure LES: low-energy contribution of the PES.
+\end{itemize}
+\item
+An important quantity: the kinetic energy of the free electron in the electric field averaged over one period of the field, the ponderomotive energy
+\begin{equation}
+U_{p}=\left< \frac{1}{2}m \left(\frac{eF}{\omega}\sin{\omega t} \right)^{2} \right>_{T} \; [SI] = \frac{F^{2}}{4\omega^{2}} \; [\text{au}],
+\end{equation}   
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+\section{Strong laser field ionizations} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{2 regimes of ionization}
+During the ionization, two regimes of are in competition (Keldysh 1965).\\
+The transition occurs when the adiabatic parameter $\gamma=\sqrt{\omega\frac{\sqrt{2I_{p}}}{F}}$ is equal to $1$.
+\begin{itemize}
+\item
+Multiphoton ionization MPI: the $e^{-}$ absorbs enough photons to be ionized. \\
+$\gamma \gg 1 \Rightarrow$ weak field and high-frequency limit. 
+\item
+Tunneling ionization: the field is strong enough to distort the Coulomb potential and form a barrier through which an $e^{-}$ can tunnel. \\
+$\gamma \ll 1 \Rightarrow$ strong field and low-frequency limit.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\begin{figure}[htp]
+\begin{subfigure} [t]{0.7\textwidth}
+\centering
+ \resizebox{1.7\textwidth}{!}{\input{data/tunnel.pdf_tex}}
+ \label{tunneling_ionization} 
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Quasi-classical limit}
+Advantage of the tunneling limit: it is compatible with the quasi-classical limit defined by $U_{p}\gg\hbar\omega$.
+\begin{itemize}
+\item
+few-cycles midinfrared pulse: $\lambda\sim 1 \mu$m, $F\sim \frac{5}{100} \Rightarrow$ ponderomotive energy $U_{p}\sim 1\,$au
+\item
+hydrogen-like atom or molecule with ionization potential $I_{p}\sim 0.5$ au
+\item
+$\gamma=\sqrt{\frac{I_{p}}{2U_{p}}} \ll 1 \Rightarrow$ tuneling regime
+\item
+$\frac{\hbar\omega}{2U_{p}}\ll 1 \Rightarrow$ quasi-classical limit
+\end{itemize}
+Then, the propagation of the wave function of the $e^{-}$ in the electric field can be reproduced classically.
+After its ionization, the $e^{-}$ follow classical trajectories. The initial positions and velocities resulting from the theory of tunneling ionization
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Strong field ionization phenomena}
+After the ionization, the $e^{-}$ can either escape or be driven back and recollide with the parent ion.
+When the $e^{-}$ rescatters, it has $3$ possibilities:
+\begin{itemize}
+\item
+it can recombine with the parent ion and use its kinetic energy for emitting light: high harmonic generation (HHG),
+\item
+it can rescatter inelastically and use its kinetic energy for ionizing a second electron: sequential ionization,
+\item
+it can rescatter "elastically": above-threshold ionization (ATI) \\ 
+$\Rightarrow$ the one of interest.
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{To compute the photoelectron spectrum PES}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{To compute the photoelectron spectrum PES}
+\begin{itemize}
+\item
+In experiment: measure kinetic energy of the electron ionized by a strong laser fields.
+\item
+In simulation: compute millions of classical trajectories of electrons after ionization and then their energy. \\
+Each trajectory is weighted by the distribution:
+\begin{align} 
+\label{ADK_distribution}
+w(\Phi_{i},v_{\perp i})=&w(0)w(1), \quad w(0)=\frac{4}{F}\exp(-\frac{2}{3}\frac{[2I_{p}]^{3/2}}{F}), \\
+w(1)=&\frac{1}{\pi F}\exp(-\frac{\sqrt{2I_{p}}v_{\perp i}^{2}}{F}).
+\end{align}
+\item
+Then, the PES is obtained by doing a data binning procedure.
+\item
+Analytical expression of the PES
+\begin{equation}
+\label{ATI_analytical_weight}
+S= \int d\Phi_{i} \int d^{2}v_{\perp i}  \; \left. w(\Phi, v_{\perp i}) \right\vert_{w>w_{0}}  E_{k}(\Phi_{i}, v_{\perp i}).
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Computed PES}
+\begin{figure}[htp]
+\vspace{6cm}
+ \resizebox{0.6\textwidth}{!}{\input{data/pes.pdf_tex}}
+ \caption{Regions (a), (b) and (c) correspond respectively to $[0, 2U_{p}]$, $[2U_{p}, 8U_{p}]$ and $[8U_{p}, 10U_{p}]$.}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Computed PAD for different energy regions.}
+\begin{figure}[htp]
+ \resizebox{0.8\textwidth}{!}{\input{data/arpes.pdf_tex}}
+ \caption{Regions (a), (b) and (c) correspond respectively to $[0, 2U_{p}]$, $[2U_{p}, 8U_{p}]$ and $[8U_{p}, 10U_{p}]$.}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+\section{To compute the low-energy structure LES}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The low-energy structure LES}
+\begin{block}{}
+High-energy component of the spectrum $\rightarrow$ hard recollisions
+\end{block}
+\begin{block}{}
+Low-energy part can be explained without having to consider any further electron-ion interaction
+\end{block}
+
+However in 2009: observation of unexpected peaks in the low-energy region of the PES spectrum for electrons
+emitted along the polarization direction of strong midinfrared laser field. 
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{The low-energy structure LES}
+\begin{figure}[htp]
+ \resizebox{0.8\textwidth}{!}{\input{data_presentation/ATI_along_field_log.pdf_tex}}
+ \vspace{0.5cm}
+ \caption{Computed ATI spectrum along the polarization of the field.}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Computed low-energy structure}
+\begin{figure}[htp]
+ \resizebox{0.6\textwidth}{!}{\input{data_presentation/les.pdf_tex}}
+  \vspace{0.25cm}
+ \caption{Calculations for argon atoms, wavelength $\lambda =2\,\mu$m, intensity $I=10^{14}$W/cm$^{2}$, $2$-cycle pulse, $U_{p}=37.3\,eV$.}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The low-energy structure LES}
+\begin{itemize}
+\item
+Energy bunching $\rightarrow$ reveals existence of caustic trajectories.
+\item
+LES disappear when using circularly polarized light $\rightarrow$ LES are due to electrons-ions recollisions,
+\item
+LES only observable for $e^{-}$ emitted along the field $\rightarrow$ recollisions with large impact parameter,
+\end{itemize}
+What are the trajectories responsible for the LES ?
+\end{frame}
+
+%------------------------------------------------
+
+\section{Mechanism at the origin of the LES} 
+
+\begin{frame}
+\begin{figure}[htp]
+ \resizebox{1\textwidth}{!}{\input{data/soft_recollision.pdf_tex}}
+ \label{soft_recollision}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Importance of the LES}
+\begin{block}{}
+The $e^{-}$ following caustic trajectories are $e^{-}$ which experience the electrostatic potential of the molecule during the longuest time,
+\end{block}
+\begin{block}{}
+These $e^{-}$ are the more likely to feel the chiral component of the potential,
+\end{block}
+\begin{block}{}
+Then, the LES are the regions of the PES the more likely to probe the chirality of a molecule.
+\end{block}
+\end{frame}
+
+
+%------------------------------------------------
+
+\section{Photoelectron spectroscopy of chiral molecule}
+\begin{frame}
+\frametitle{The experiment}
+\begin{block}{Objective}
+To look if there is a signature of the chirality in the low energy part of the spectrum.
+\end{block}
+\begin{block}{The experiment}
+To illuminate a medium composed of chiral molecules with an elliptically polarized midinfrared strong laser field. \\
+Then, to count the numbers of electrons responsible for the energy bunching detected in each half spaces on both sides of
+the polarization plane.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The experiment}
+\begin{figure}[htp]
+ \resizebox{0.8\textwidth}{!}{\input{data/LES_chiral_experiment.pdf_tex}}
+ \caption{Picture of the experiment for probing chirality with the LES. The detectors $D_{1}$ and $D_{2}$ count the electrons number responsible for the LES respectively in half space $y<0$ and $y>0$.}
+ \label{experiment}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The simulation}
+\begin{block}{}
+We replace the hydrogen-like atom potential by a chiral one, the system is not invariant by rotation anymore.
+\end{block}
+\begin{block}{}
+We have to take into account the different orientations of the molecule according to the electric field.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Relative configuration molecule - laser field}
+
+\begin{figure}[htp]
+%\vspace{-3cm}
+\resizebox{0.7\textwidth}{!}{\input{data/frames_molecular_laboratory.pdf_tex}}
+\caption{Relative configuration of the molecular frame and the polarization frame. Bond lengths and charges are given in $au$.}
+\label{frames_molecular_laboratory}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Analytical expression of the LES}
+Analytical expression of the LES with a chiral molecule and an elliptically polarized laser field 
+\begin{align}
+S&= \int d\Phi_{i} \int d^{2}v_{\perp i}  \; \left. w(\Phi, v_{\perp i}) \right\vert_{w>w_{0}}  E_{k}(\Phi_{i}, v_{\perp i}), \\
+\Rightarrow S&=\iint d\theta \sin{\theta} d\phi \int d\alpha \int d\Phi \int dv_{\perp xz}dv_{\perp y} \, \\ 
+& \qquad \qquad \qquad \qquad \left.  w(\Phi, v_{\perp xz}, v_{\perp y}) \right\vert_{w>w_{0}}E_{k}^{\infty}(\theta, \phi, \Phi, v_{\perp xz}, v_{\perp y}), \\
+\Rightarrow S&=\sum_{n=1}^{38} l_{i} \int d\alpha \int d\Phi \int dv_{\perp xz}dv_{\perp y} \, \\ 
+& \qquad \qquad \qquad \qquad \left. w(\Phi, v_{\perp xz}, v_{\perp y}) \right\vert_{w>w_{0}} E_{k}^{\infty}(\theta_{i}, \phi_{i}, \Phi, v_{\perp xz}, v_{\perp y}).
+\end{align}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Result chiral spectroscopy}
+
+\begin{figure}[htp]
+\begin{subfigure} [htp]{0.3\textwidth}
+\hspace{-1cm}
+  \raisebox{17px}{\resizebox{0.983\textwidth}{!}{\input{data/leb_sum.pdf_tex}}}
+ \label{KastnerLES} 
+\end{subfigure}
+\begin{subfigure} [htp]{0.3\textwidth}
+\hspace{-0.5cm}
+  \raisebox{17px}{\resizebox{0.983\textwidth}{!}{\input{data/leb_sum_zoom_1.pdf_tex}}}
+ \label{myLES} 
+\end{subfigure}
+\begin{subfigure} [htp]{0.7\textwidth}
+\hspace{-0.5cm}
+  \raisebox{17px}{\resizebox{0.983\textwidth}{!}{\input{data/leb_sum_zoom_2.pdf_tex}}}
+ \label{myLES} 
+\end{subfigure}
+ \caption{Comparison of the LES due to electrons detected in the half-space defined by $y>0$ (red line) and the LES due to electrons detected in the half-space defined by $y<0$ (green line). The molecule used in the simulation is the one defined in Fig.~(\ref{frames_molecular_laboratory}) ($I_{p}=0.3163\,au$). The laser field is a $4$-cycle clockwise elliptically polarized pulse with an ellipticity of $0.1$. The wavelenght is $\lambda=0.9\,\mu$m and the intensity is $I=0.5\times10^{14}$ W/cm$^{2}$. \label{leb_sum}}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
